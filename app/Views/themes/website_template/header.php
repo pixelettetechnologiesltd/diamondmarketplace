@@ -109,18 +109,18 @@
 
                     <li class="nav-item">
                         <?php if (!$session->userdata('isUser')) { ?>
-                            <a href="javascript:;" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Token</a>
+                            <a href=<?php echo base_url('token')?> class="nav-link">Token</a>
                         <?php } else { ?>
-                            <a class="nav-link" href="">Token</a>
+                            <a href=<?php echo base_url('token')?> class="nav-link">Token</a>
                         <?php } ?>
 
                     </li>
 
                     <li class="nav-item">
                         <?php if (!$session->userdata('isUser')) { ?>
-                            <a href="javascript:;" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Support</a>
+                            <a href="<?php echo base_url('contact') ?>" class="nav-link">Support</a>
                         <?php } else { ?>
-                            <a class="nav-link" href="">Support</a>
+                            <a href="<?php echo base_url('contact') ?>" class="nav-link">Support</a>
                         <?php } ?>
 
                     </li>

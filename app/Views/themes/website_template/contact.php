@@ -8,54 +8,11 @@
       $i++;
     }
 ?>
-<div class="map-content">
 
-    <div id="map"></div>
-
-</div>
-<!-- /.End of map content -->
-<section class="border-bottom py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-4 text-center border-end">
-        <h6 class="text-uppercase mb-2 font-weight-bold fs-13"><?php echo htmlspecialchars_decode($contract_1[1]) ?></h6>
-        <!-- /.End of heading -->
-        <div class="mb-5 mb-md-0">
-          <a href="#!" class="h4"><?php echo htmlspecialchars_decode($contract_2[1]) ?></a>
-        </div>
-        <!-- /.End of link -->
-      </div>
-      <div class="col-12 col-md-4 text-center border-end">
-        <h6 class="text-uppercase mb-2 font-weight-bold fs-13"><?php echo htmlspecialchars_decode($contract_1[2]) ?></h6>
-        <!-- /.End of heading -->
-        <div class="mb-5 mb-md-0">
-          <a href="#!" class="h4">
-            <?php echo htmlspecialchars_decode($contract_2[2]) ?>
-          </a>
-        </div>
-        <!-- /.End of link -->
-      </div>
-      <div class="col-12 col-md-4 text-center">
-        <h6 class="text-uppercase mb-2 font-weight-bold fs-13"><?php echo htmlspecialchars_decode($contract_1[3]) ?></h6>
-        <!-- /.End of heading -->
-        <a href="#!" class="h4">
-          <?php echo htmlspecialchars_decode($contract_2[3]) ?>
-        </a>
-        <!-- /.End of link -->
-      </div>
-    </div>
-  </div>
-</section>
 <section class="section-about py-5">
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
-        <div class="section-title text-center mb-5">
-          <h2 class="block-title fs-25 mb-2"><?php echo htmlspecialchars_decode($contract_1[4]) ?></h2>
-          <div class="sub-title fs-18">
-            <?php echo htmlspecialchars_decode($contract_2[4]) ?>
-          </div>
-        </div>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -64,22 +21,14 @@
           <div class="col-sm-6 col-md-6 mb-5 mb-md-0">
             <div class="contact-info">
               <div class="mb-4">
-                <h3 class="info-title link-title fs-18 mb-3 font-weight-600 position-relative"><?php echo htmlspecialchars_decode($contract_1[5]) ?></h3>
+                <h3 class="info-title link-title fs-18 mb-3 font-weight-600 position-relative">DROP A MESSAGE</h3>
                 <address class="mb-4">
-                  <?php echo htmlspecialchars_decode($contract_2[5]) ?>
+                Don’t worry, We never spam!
                 </address>
               </div>
               <!-- /.End of address -->
-              <div class="mb-4">
-                <h3 class="info-title link-title fs-18 mb-3 font-weight-600 position-relative"><?php echo htmlspecialchars_decode($contract_1[6]) ?></h3>
-                <?php echo htmlspecialchars_decode($contract_2[6]) ?>
-              </div>
-              <!-- /.End of phone -->
-              <div class="mb-4">
-                <h3 class="info-title link-title fs-18 mb-3 font-weight-600 position-relative"><?php echo htmlspecialchars_decode($contract_1[7]) ?></h3>
-                <?php echo htmlspecialchars_decode($contract_2[7]) ?>
-              </div>
-              <!-- /.End of email -->
+             
+            
             </div>
           </div>
           <div class="col-sm-6 col-md-6">
@@ -97,20 +46,18 @@
             <?php } ?>
              <?php echo form_open(base_url('contactMsg'),'id="contactForm"  class="contact_form" name="contactForm"'); ?>
               <div class="mb-3">
-                <input type="text" class="form-control" id="contactName" name="fullname" placeholder="Full name">
+                <input type="text" class="form-control" id="contactName" name="fullname" placeholder="Name">
               </div>
               <div class="mb-3">
-                <input type="email" class="form-control" id="contactEmail" name="email" placeholder="hello@domain.com">
+                <input type="email" class="form-control" id="contactEmail" name="email" placeholder="Email">
               </div>
-              <div class="mb-3">
-                <input type="text" class="form-control" id="contactPhonr" name="phone" placeholder="Telephone">
-              </div>
+             
               <div class="mb-3">
                 <textarea class="form-control" id="contactMessage" name="comment" rows="5" 
-                  placeholder="Tell us what we can help you with!"></textarea>
+                  placeholder="Message"></textarea>
               </div>
               <!-- Submit -->
-              <button type="submit" class="btn btn-primary"><?php echo display('Send_message'); ?></button>
+             <center> <button type="submit" class="btn"><?php echo display('Submit'); ?></button></center>
             <?php echo form_close() ?>
           </div>
         </div>

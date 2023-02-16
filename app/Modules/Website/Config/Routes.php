@@ -8,9 +8,10 @@ if(!isset($routes))
 $routes->group('/', ['namespace' => 'App\Modules\Website\Controllers'], function($subroutes){
 
     /*** Route for Website ***/
-        $subroutes->add('', 'Home::index/$1');
-        // $subroutes->add('home', 'Home::index');
-         //$subroutes->add('collection/(:any)', 'Home::collectionWiseNfts/$1');
+        $subroutes->add('', 'Home::index');
+         $subroutes->add('home', 'Home::index');
+        $subroutes->add('collection/(:any)', 'Home::collectionWiseNfts/$1');
+        $subroutes->add('token', 'Home::token');
         $subroutes->add('signup', 'Home::register');
         $subroutes->add('user/signin', 'Home::login');
         $subroutes->add('home/forgotPassword', 'Home::forgotPassword');
