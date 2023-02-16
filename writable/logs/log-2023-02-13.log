@@ -1,0 +1,112 @@
+CRITICAL - 2023-02-13 16:58:16 --> Too few arguments to function App\Libraries\UploadImage::Image(), 4 passed in C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php on line 35 and exactly 5 expected
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(35): App\Libraries\UploadImage->Image(Object(CodeIgniter\HTTP\Files\UploadedFile), 'public/uploads/...', 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->index()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 16:59:33 --> Too few arguments to function App\Libraries\UploadImage::Image(), 4 passed in C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php on line 29 and exactly 5 expected
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(29): App\Libraries\UploadImage->Image(Object(CodeIgniter\HTTP\Files\UploadedFile), 'public/uploads/...', 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->index()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 17:00:30 --> Too few arguments to function App\Libraries\UploadImage::Image(), 4 passed in C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php on line 30 and exactly 5 expected
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(30): App\Libraries\UploadImage->Image(Object(CodeIgniter\HTTP\Files\UploadedFile), 'public/uploads/...', 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->index()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 20:35:04 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(191): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 20:35:45 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(191): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 20:56:20 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 22:51:49 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 22:54:14 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 22:54:45 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 22:55:18 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 22:57:24 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(193): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 22:58:53 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(193): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 22:59:35 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(193): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', '/public/uploads...', 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 23:01:04 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', NULL, 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 23:03:44 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', '/public/uploads...', 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-13 23:05:58 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\diamondnxt\app\Modules\User\Controllers\Customer\Profile.php(192): App\Libraries\UploadImage->Image(NULL, 'public/uploads/...', '/public/uploads...', 300, 300)
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\User\Controllers\Customer\Profile->withdraw()
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\User\Controllers\Customer\Profile))
+#3 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
