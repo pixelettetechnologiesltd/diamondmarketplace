@@ -79,7 +79,9 @@ class User_nfts extends BaseController
   }
 
   public function add_collection()
-  {
+  { 
+
+   
     ini_set('memory_limit', '44M');
     if (!$this->session->get('isLogIn') && !$this->session->get('isAdmin')) {
           return redirect()->to('admin');
@@ -149,7 +151,7 @@ class User_nfts extends BaseController
               'logo_image' => $froImage, 
               'created_at' => date('Y-m-d H:i:s'),
           ];
-
+          
           $builder = $this->db->table('nft_collection');
           $ins = $builder->insert($data);
 

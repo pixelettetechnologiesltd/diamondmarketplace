@@ -51,6 +51,7 @@ h6 {
   font-size: 15px;
   padding: 0.797rem .75rem;
   font-weight: 600;
+  color: #000;
 }
 
 .btn-check:focus+.btn,
@@ -2702,19 +2703,20 @@ button.accordion-button.collapsed {
     - Contact page
 ----------------------------------------------------------------- */
 .info-title {
-  padding-left: 30px;
-  font-size: 18px;
+ color: #A08B5E !important;
+ font-size: 42px !important;
 }
-
+@media (min-width: 768px){
+.mb-md-0 {
+    margin-bottom: 159px !important;
+}
+}
 .info-title::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -1px;
-  height: 2px;
-  width: 20px;
-  content: '';
-  background-color: #A08B5E;
+  
+}
+.input-group-text {
+  background-color: #1A1A1A !important;
+  border: none !important;
 }
 
 #map {

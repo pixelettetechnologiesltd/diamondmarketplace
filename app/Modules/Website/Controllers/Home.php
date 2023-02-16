@@ -11,19 +11,14 @@ class Home extends BaseController
     }
     public function index()
     {
-      
-         $slug = 'diamondnxt';
-         if ($slug == null) {
-            return redirect()->to(base_url());
-        }
         
-        $data['collectionInfo'] = $collectionInfo = $this->common_model->where_row('nft_collection', ['slug'=>$slug]);
+        
+        $data['collectionInfo'] = $collectionInfo = $this->common_model->where_row('nft_collection', []);
         if(empty($collectionInfo)){
             return redirect()->to(base_url());
         }
         $data['ownerInfo'] = $this->common_model->where_row('user', ['user_id'=>$collectionInfo->user_id]);
-         
-        $data['totalItem'] = $this->web_model->countRow('nfts_store', ['collection_id'=>$collectionInfo->id, 'status'=>3]);
+         $data['totalItem'] = $this->web_model->countRow('nfts_store', ['collection_id'=>$collectionInfo->id, 'status'=>3]);
         $data['nftOwner'] = $this->web_model->countNftOwnerInCollection('nfts_store', ['collection_id'=>$collectionInfo->id]);
         $data['floorPrice'] = $this->web_model->getMinPrice('nfts_store', ['collection_id'=>$collectionInfo->id, 'status'=>3], 'price');
 
@@ -1295,5 +1290,9 @@ class Home extends BaseController
         echo esc($msg);
         exit;
     } 
+    public function token(){
+        $data['content']        = view('themes/'.$this->templte_name->name.'/token');
+        return $this->template->website_layout($data);
+    }
 
 }
