@@ -29,16 +29,21 @@
           </span>
           <input placeholder="0.00" aria-label="0.00" aria-describedby="basic-addon1" type="number" class="form-control" />
         </div>
-        <div>
-
+        <div style="
+          height: 40px;
+          width: 40px;
+          position: relative;
+          margin: -18px auto;
+          border: 4px solid rgb(26 26 26);
+          z-index: 2;">
+          <center><img src="<?php echo base_url() . '/public/assets/images/icons/shift.png' ?>" ; width="40" /></center>
         </div>
-        <center><img src="<?php echo base_url() . '/public/assets/images/icons/shift.png' ?>" ; width="20" /></center>
         <div class="mb-3 input-group">
           <span class="input-group-text" id="basic-addon1">
             <img src="<?php echo base_url() . '/public/assets/images/icons/dnxt.png' ?>" ; width="20" />
             <span style="font-size: 12px; color: #808080; padding-left: 7px;">DNXT</span>
           </span>
-          <input placeholder="0.00" aria-label="0.00" aria-describedby="basic-addon1" type="number" class="form-control" />
+          <input placeholder="0.00" aria-label="0.00" aria-describedby="basic-addon1" type="number" class="form-control" style="" />
         </div>
         <!-- Submit -->
         <center>
