@@ -5,6 +5,7 @@
       </div>
     </div>
     <div class="row justify-content-center">
+
       <h1 style="text-align:center">DiamondNXT <br> TOKEN SALE</h1>
 
       <p style="text-align:center; color:#D8D8D8;">1 DNXT = 1 MATIC</p>
@@ -13,6 +14,7 @@
           <div class="alert alert-success alert-dismissible">
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             <strong><?php echo display('Success'); ?>!</strong> <?php echo esc($message); ?>
+
           </div>
         <?php } ?>
         <?php if (isset($exception)) { ?>
