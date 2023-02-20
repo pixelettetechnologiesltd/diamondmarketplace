@@ -3,7 +3,6 @@ function formReset(id) {
     document.getElementById(id).reset();
 }
 
- 
 "use strict";
 function sweetAlert(icon, title) { 
     Swal.fire({
@@ -21,6 +20,7 @@ function sweetAlert(icon, title) {
         }
     })
 }
+
 
 
 

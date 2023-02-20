@@ -6,7 +6,6 @@
     </div>
     <div class="row justify-content-center">
     <h1 style="text-align:center">DiamondNXT  <br> TOKEN SALE</h1>
-    
     <p style="text-align:center; color:#D8D8D8;">1 DNXT = 1 MATIC</p>
           <div class="col-sm-6 col-md-6" style="margin-top:30px">
             <?php if(isset($message)){ ?>

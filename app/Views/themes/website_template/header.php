@@ -17,7 +17,8 @@
     <link href="<?php echo esc($frontendAssets); ?>/plugins/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="<?php echo esc($frontendAssets); ?>/css/style.css" rel="stylesheet">
     <script src="<?php echo esc($frontendAssets); ?>/plugins/jquery/jquery.min.js"></script>
-
+    <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet">
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
     <!-- Datepicker js & css -->
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo esc($frontendAssets) ?>/css/daterangepicker.css" />
     <script type="text/javascript" src="<?php echo esc($frontendAssets) ?>/js/moment.min.js"></script>

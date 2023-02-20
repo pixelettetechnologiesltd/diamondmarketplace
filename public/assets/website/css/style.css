@@ -2711,14 +2711,33 @@ button.accordion-button.collapsed {
     margin-bottom: 159px !important;
 }
 }
-.info-title::before {
-  
+.e-control-wrapper.e-slider-container.e-horizontal .e-slider-track {
+  background: #CBCBCB !important;
+}
+.e-control-wrapper.e-slider-container .e-slider .e-range {
+  background-color: #A08B5E !important;
+}
+.e-control-wrapper.e-slider-container .e-slider .e-handle {
+  background:url('./../../../assets/images/icons/Vector\ \(2\).png') !important
+}
+
+.e-control-wrapper.e-slider-container .e-slider .e-handle {
+ height: 18px !important;
+ width: 19px !important;
+}
+.e-control-wrapper.e-slider-container.e-horizontal .e-handle {
+  top: calc(50% - 17px) !important;
 }
 .input-group-text {
   background-color: #1A1A1A !important;
   border: none !important;
 }
-
+span.e-tick-value.e-tick-after {
+  color: #cbcbcb !important;
+}
+.e-tooltip-cutomization{
+  background-color: #A08B5E !important;
+}
 #map {
   width: 100%;
   height: 300px;
