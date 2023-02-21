@@ -26,7 +26,7 @@
             <img src="<?php echo base_url() . '/public/assets/images/icons/matic.png' ?>" ; width="20" />
             <span style="font-size: 12px; color: #808080; padding-left: 7px;">MATIC</span>
           </span>
-          <input id="maticValue" value="1" placeholder="0.00" aria-label="0.00" aria-describedby="basic-addon1" type="number" class="form-control" />
+          <input id="maticValue" onkeyup="calculateMatic(this.value)" value="1" placeholder="0.00" aria-label="0.00" aria-describedby="basic-addon1" type="number" class="form-control" />
         </div>
         <div class="diamondLogo">
           <center><img src="<?php echo base_url() . '/public/assets/images/icons/shift.png' ?>" ; width="40" /></center>
@@ -40,7 +40,7 @@
         </div>
         <!-- Submit -->
         <center>
-          <button type="submit" class="btn"><?php echo display('Buy Token Now'); ?></button>
+          <button id="dnxtBuyButton" class="btn"><?php echo display('Buy Token Now'); ?></button>
         </center>
         <?php echo form_close() ?>
       </div>
@@ -69,6 +69,10 @@
 <script>
   const input1 = document.getElementById('maticValue');
   const input2 = document.getElementById('dnxtValue');
+
+  function calculateMatic(ish) {
+    input2.value = ish / 0.04;
+  }
 
   function calculateDNXT(ish) {
     input1.value = ish * 0.04;
