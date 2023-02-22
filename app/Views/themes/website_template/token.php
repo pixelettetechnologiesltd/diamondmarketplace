@@ -8,19 +8,16 @@
       <h1 style="text-align:center">DiamondNXT <br> TOKEN SALE</h1>
       <p style="text-align:center; color:#D8D8D8;">1 DNXT = 1 MATIC</p>
       <div class="col-sm-6 col-md-6" style="margin-top:30px">
-        <?php if (isset($message)) { ?>
-          <div class="alert alert-success alert-dismissible">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            <strong><?php echo display('Success'); ?>!</strong> <?php echo esc($message); ?>
-          </div>
-        <?php } ?>
-        <?php if (isset($exception)) { ?>
-          <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            <strong><?php echo display('Exception'); ?>!</strong> <?php echo esc($exception); ?>
-          </div>
-        <?php } ?>
-        <?php echo form_open(base_url(''), 'id=""  class="" name=""'); ?>
+        <div class="alert alert-success alert-dismissible" hidden id="successDiv">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <strong>Success:</strong>
+          <p id="successMsg"></p>
+        </div>
+        <div class="alert alert-danger alert-dismissible" hidden id="errorDiv">
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <strong><?php echo display('Exception'); ?>!</strong>
+          <p id="errorMsg"> </p>
+        </div>
         <div class="mb-3 input-group" style="margin-bottom: 0rem !important;">
           <span class="input-group-text" id="basic-addon1">
             <img src="<?php echo base_url() . '/public/assets/images/icons/matic.png' ?>" ; width="20" />
@@ -40,9 +37,8 @@
         </div>
         <!-- Submit -->
         <center>
-          <button id="dnxtBuyButton" class="btn"><?php echo display('Buy Token Now'); ?></button>
+          <button onclick="buyDnxtToken()" class="btn" <?php if (!($isLogIn)) { ?> disabled <?php } ?>>Buy Token Now</button>
         </center>
-        <?php echo form_close() ?>
       </div>
     </div>
   </div>
@@ -69,6 +65,19 @@
 <script>
   const input1 = document.getElementById('maticValue');
   const input2 = document.getElementById('dnxtValue');
+  const vendorAbi = [{
+    "inputs": [],
+    "name": "buyTokens",
+    "outputs": [{
+      "internalType": "uint256",
+      "name": "tokenAmount",
+      "type": "uint256"
+    }],
+    "stateMutability": "payable",
+    "type": "function"
+  }, ];
+
+  const vendorContractAddress = "0xB503ee2ac862dE16Ea51C144ee8d0117D50F5781";
 
   function calculateMatic(ish) {
     input2.value = ish / 0.04;
@@ -76,5 +85,63 @@
 
   function calculateDNXT(ish) {
     input1.value = ish * 0.04;
+  }
+
+  async function buyDnxtToken() {
+    try {
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(vendorContractAddress, vendorAbi, signer);
+      const transactionParameters = {
+        value: ethers.utils.parseEther(input1.value) // the amount of Ether to send
+      };
+      const result = await contract.buyTokens(transactionParameters);
+
+      document.getElementById('errorDiv').hidden = true;
+      document.getElementById('successDiv').hidden = false;
+
+
+      const transactionHash = result.hash;
+      document.getElementById('successMsg').innerHTML = transactionHash;
+      console.log(transactionHash);
+
+
+      const tranxStatus = await result.wait();
+      document.getElementById('successMsg').innerHTML = input2.value + " DNXT Successfully Transfered!";
+      console.log(tranxStatus);
+      // const newId = await contract.getNewTokenID();
+
+      // if (item.hash) {
+      //   let postData = {};
+      //   postData[csrf_token] = get_csrf_hash;
+      //   postData["owner_wallet"] = item.from;
+      //   postData["contract_address"] = item.to;
+      //   postData["trx_hash"] = item.hash;
+      //   postData["token_id"] = 1 + parseInt(newId._hex, 16);
+      //   postData["nftId"] = nftId;
+
+      //   $.ajax({
+      //     url: base_url + "/nfts/new-nft-update",
+      //     type: "post",
+      //     data: postData,
+      //     dataType: "json",
+      //     success: function(res) {
+      //       if (res == 1) {
+      //         alert("Your nft created successfully done!");
+      //         window.location.href = base_url + "/user/dashboard";
+      //       } else {
+      //         alert("Something went wrong please try again!");
+      //         location.reload();
+      //       }
+      //     },
+      //   });
+      // }
+    } catch (error) {
+      document.getElementById('errorMsg').innerHTML = error.message;
+      document.getElementById('errorDiv').hidden = false;
+      document.getElementById('successDiv').hidden = true;
+      console.log(error);
+    }
   }
 </script>

@@ -62,3 +62,241 @@ CRITICAL - 2023-02-21 18:25:29 --> Undefined variable: slug
 #3 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2023-02-21 18:35:08 --> Undefined variable: slug
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 30, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->index()
+#2 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#3 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-21 18:35:10 --> Undefined variable: slug
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 30, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->index()
+#2 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#3 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-21 18:35:38 --> Undefined variable: slug
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 32, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->index()
+#2 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#3 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-21 18:36:01 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:36:06 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:36:12 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:36:17 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:41:35 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:48:16 --> Undefined variable: data
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:51:33 --> Undefined variable: checkLogin
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:52:19 --> Undefined variable: checkLogin
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:52:22 --> Undefined variable: checkLogin
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:52:38 --> Undefined variable: checkLogin
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:52:49 --> Undefined variable: checkLogin
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 18:53:45 --> Undefined variable: checkLogin
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 19:00:08 --> Undefined variable: isUser
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/token.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 43, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(1238): view('themes/website_...')
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->token()
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 19:01:34 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 19:02:46 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 19:02:52 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 19:35:55 --> Trying to get property 'uid' of non-object
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(499): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', '/Applications/M...', 499, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->network_update()
+#2 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#3 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-02-21 20:46:30 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 20:46:40 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 20:47:27 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 20:47:31 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-02-21 23:35:17 --> Undefined variable: collection
+#0 /Applications/MAMP/htdocs/diamondnxt/app/Views/themes/website_template/ajax_nfts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 82, Array)
+#1 /Applications/MAMP/htdocs/diamondnxt/system/View/View.php(246): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/diamondnxt/system/Common.php(1119): CodeIgniter\View\View->render('themes/website_...', Array, true)
+#3 /Applications/MAMP/htdocs/diamondnxt/app/Modules/Website/Controllers/Home.php(112): view('themes/website_...', Array)
+#4 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(926): App\Modules\Website\Controllers\Home->ajax_coll_nfts('1', '1')
+#5 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#6 /Applications/MAMP/htdocs/diamondnxt/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/diamondnxt/index.php(64): CodeIgniter\CodeIgniter->run()
+#8 {main}

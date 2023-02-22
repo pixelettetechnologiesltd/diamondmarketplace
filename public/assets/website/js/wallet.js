@@ -13,17 +13,6 @@ $(document).on("click", "#connect_wallet", function () {
   });
 });
 
-//sign in by metamask start
-$(document).on("click", "#dnxtBuyButton", function () {
-  connProvider.then((provider) => {
-    if (provider && provider.isMetaMask) {
-      checkConnection();
-    } else {
-      alert("Please install MetaMask!");
-    }
-  });
-});
-
 //sign in by metamask end
 async function checkConnection() {
   await ethereum

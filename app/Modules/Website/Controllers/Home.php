@@ -12,6 +12,8 @@ class Home extends BaseController
     }
     public function index()
     {
+
+
         $data['collectionInfo'] = $collectionInfo = $this->common_model->where_row('nft_collection', []);
         if (empty($collectionInfo)) {
             return redirect()->to(base_url());
@@ -27,7 +29,7 @@ class Home extends BaseController
         $data['networks'] = $this->common_model->where_rows('blockchain_network', array('status' => 1), 'id', 'asc');
 
         $data['frontendAssets'] = base_url('public/assets/website');
-        $data['title']        = str_replace('-', ' ', $slug);
+        // $data['title']        = str_replace('-', ' ', $slug);
         $data['content']        = view('themes/' . $this->templte_name->name . '/collection_wise_nfts', $data);
         return $this->template->website_layout($data);
     }
@@ -1232,7 +1234,8 @@ class Home extends BaseController
     }
     public function token()
     {
-        $data['content']        = view('themes/' . $this->templte_name->name . '/token');
+        $data['isLogIn'] = $this->session->userdata('isLogIn');
+        $data['content'] = view('themes/' . $this->templte_name->name . '/token', $data);
         return $this->template->website_layout($data);
     }
 }
