@@ -10,6 +10,7 @@ $routes->group('/', ['namespace' => 'App\Modules\Website\Controllers'], function
     /*** Route for Website ***/
         $subroutes->add('', 'Home::index');
          $subroutes->add('home', 'Home::index');
+         $subroutes->add('applyfilter','Home::applyfilter');
         $subroutes->add('collection/(:any)', 'Home::collectionWiseNfts/$1');
         $subroutes->add('token', 'Home::token');
         $subroutes->add('signup', 'Home::register');

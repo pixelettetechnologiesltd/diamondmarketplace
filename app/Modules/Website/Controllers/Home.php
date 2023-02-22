@@ -11,11 +11,29 @@ class Home extends BaseController
     }
     public function index()
     {
+    
+    echo    $color=$this->request->getVar('color-slider',FILTER_SANITIZE_STRING); 
+    echo "<br>";
+        echo $clarity =$this->request->getVar('clarity-slider',FILTER_SANITIZE_STRING);
+        echo "<br>";
+       echo  $carat=$this->request->getVar('carat-slider',FILTER_SANITIZE_STRING); 
+       echo "<br>";     
+       echo $cut =$this->request->getVar('cut-slider',FILTER_SANITIZE_STRING); 
+       echo "<br>";         
+       echo  $price =$this->request->getVar('price-slider',FILTER_SANITIZE_STRING);
         
+        $data['collectionInfo'] = $collectionInfo = $this->common_model->where_row('nft_collection', [
+            'color_slider <=' => $color,
+            'clarity_slider <=' => $clarity,
+            'carat_slider <=' => $carat,
+            'cut_slider <=' => $cut,
+            'price_slider <=' => $price
+        ]);       
+        print_r($data['collectionInfo']);
         
-        $data['collectionInfo'] = $collectionInfo = $this->common_model->where_row('nft_collection', []);
         if(empty($collectionInfo)){
-            return redirect()->to(base_url());
+            $data['content']        = view('themes/'.$this->templte_name->name.'/collection_wise_nfts',$data);
+            return $this->template->website_layout($data);
         }
         $data['ownerInfo'] = $this->common_model->where_row('user', ['user_id'=>$collectionInfo->user_id]);
          $data['totalItem'] = $this->web_model->countRow('nfts_store', ['collection_id'=>$collectionInfo->id, 'status'=>3]);
@@ -28,12 +46,18 @@ class Home extends BaseController
         $data['networks'] = $this->common_model->where_rows('blockchain_network', array('status' => 1), 'id', 'asc');
 
         $data['frontendAssets'] = base_url('public/assets/website');
-        $data['title']        = str_replace('-', ' ', $slug);
+        //$data['title']        = str_replace('-', ' ', $slug);
         $data['content']        = view('themes/'.$this->templte_name->name.'/collection_wise_nfts',$data);
         return $this->template->website_layout($data);
     }
-
-
+     public function applyfilter(){
+        
+         $color=$this->request->getVar('color-slider',FILTER_SANITIZE_STRING);                
+        
+        
+      
+     }
+    
     public function nft_details($tokenid=null, $nftTableId=null, $contractAdd=null)
     {
          

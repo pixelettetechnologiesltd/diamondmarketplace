@@ -1,0 +1,24 @@
+CRITICAL - 2023-02-22 13:19:20 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\Website\Controllers\Home->index()
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-02-22 13:29:52 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\Website\Controllers\Home->index()
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-02-22 13:33:44 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\Website\Controllers\Home->index()
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-02-22 14:14:47 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(926): App\Modules\Website\Controllers\Home->index()
+#1 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Website\Controllers\Home))
+#2 C:\xampp\htdocs\diamondnxt\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\diamondnxt\index.php(64): CodeIgniter\CodeIgniter->run()
+#4 {main}

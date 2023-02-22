@@ -60,8 +60,6 @@
                             </div>
                             <p class="fw-medium small mb-3"><?php echo display('Collection_logo_recommended'); ?></p>
                         </div>
-                        
-
                         <div class="mb-4">
                             <label for="col_name" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Collection_Title'); ?> <span class="text-danger">*</span></label>
 
