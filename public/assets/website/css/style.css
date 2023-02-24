@@ -1728,7 +1728,7 @@ textarea.form-control {
   background-color: #A08B5E;
   text-align: left;
   color: #1A1A1A;
-  padding: 10px;
+  padding: 4px;
 
 }
 
@@ -2767,6 +2767,9 @@ span.e-tick-value.e-tick-after {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+select.form-select {
+  color: #6C757D;
 }
 .e-arrow-tip-inner.e-tip-bottom{
   display: none;

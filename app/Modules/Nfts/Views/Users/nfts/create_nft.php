@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-8">
-                <div class="border rounded-5 p-3 p-sm-5">
+                <div class="p-sm-5">
                 <h2 class="fw-bold mb-5">
                     <span><?php echo esc($title); ?></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -39,12 +39,7 @@
 
                     <?php
                     }
-
-
                     ?>
-
-
-
                     <?php echo form_open_multipart("", "id='createNftform'"); ?>
                      
                         <div class="mb-4">
@@ -81,7 +76,7 @@
                             </p>
                          
                             <?php  
-                            $att = ["class"=>"form-select", "id"=>"collections", "required"=>"required"]; 
+                            $att = ["class"=>"form-select", "id"=>"collections",]; 
                             $op = array();
                             foreach ($collections as $key => $colVal) {
                                 $op[$colVal->id] = esc($colVal->title);  
@@ -90,14 +85,59 @@
                             ?>
                         </div>
                         <div class="mb-4">
-                            <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Blockchain_Network'); ?></label>
+                            <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Color'); ?></label>
+                            <select name="color" class="form-select" aria-label="Default select example">
+                             <option value="0">D</option> 
+                             <option value="1">E</option>
+                             <option value="2">F</option>  
+                             <option value="3">G</option> 
+                             <option value="4">H</option> 
+                             <option value="5">I</option>     
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Clarity'); ?></label>
+                            <select name="clarity" class="form-select" aria-label="Default select example">
+                             <option value="0">IF</option> 
+                             <option value="1">VVS1</option>
+                             <option value="2">VVS2</option>  
+                             <option value="3">VS1</option> 
+                             <option value="4">Vs2</option> 
+                                 
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Carat'); ?></label>
+                            <select name="Carat" class="form-select" aria-label="Default select example">
+                             <option value="0">1</option> 
+                             <option value="1">2</option>
+                             <option value="2">3</option>  
+                             <option value="3">4</option> 
+                             <option value="4">5</option> 
+                             <option value="5">6</option> 
+                             <option value="6">7</option>        
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Cut'); ?></label>
+                            <select name="Cut" class="form-select" aria-label="Default select example">
+                             <option value="0">Good</option> 
+                             <option value="1">Very Good</option>
+                             <option value="2">Ideal</option>    
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Price'); ?></label>
+                        <input type="number" name="price_slider" class="form-control" min="200" max="5000" step="1"  placeholder="<?php echo display('Enter price up to $5000'); ?>" required="required">
+                        </div>   
+                        <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Blockchain_Network'); ?></label>
                             <select name="blockchain" class="form-select" aria-label="Default select example" disabled>
                                     <?php if($network){ ?>
                                     <option selected value="<?php echo esc($network->id); ?>"><?php echo esc($network->network_name); ?></option> 
                                     <?php } ?>
                             </select>
                         </div>
-                         <div class="mb-4">
+                         <div class="mb-4" style="margin-left:45px">
                        
 
                             <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('add_image_file'); ?> <span class="text-danger"> *</span>
@@ -127,6 +167,7 @@
                                     </label>
                                 </div>
                             </div>
+                            
                             <p class="fw-medium small mt-1 small mb-3"><?php echo display('support_file'); ?></p>
                             <span class="img-empty-msg text-danger"></span> 
                         </div>

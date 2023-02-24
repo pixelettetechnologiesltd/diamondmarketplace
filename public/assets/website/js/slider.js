@@ -49,7 +49,6 @@ let claritySlider = createSlider(0, clarities.length - 1, 'IF', 'VS2', 1, toolti
 let cutSlider = createSlider(0, cut.length - 1, 'Good', 'Ideal', 1, tooltipChangeHandler, renderingTicksHandler, cut);
 colorSlider.appendTo('#color-slider');
 claritySlider.appendTo('#clarity-slider');
-
 cutSlider.appendTo('#cut-slider');
 function onScroll() {
     timeObj.refreshTooltip(timeObj.tooltipTarget);

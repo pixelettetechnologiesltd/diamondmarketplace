@@ -219,7 +219,8 @@ function update_networkifno(chainId = '') {
 }
 
 $("body").on("submit", "#createNftform", async function (event) {
-    event.preventDefault();
+  
+  event.preventDefault();
     if (demo_version() == false) {
         return false;
     }
@@ -250,16 +251,11 @@ $("body").on("submit", "#createNftform", async function (event) {
         return false;
     }
     $(".img-empty-msg").text("");
-    var formData = new FormData(this);
-
+    var formData = $('#createNftform').serialize();
     $.ajax({
         url: base_url + '/nfts/create-action',
-        cache: false,
-        contentType: false,
-        processData: false,
-        type: "post",
-        data: formData,
-        dataType: "json",
+        type: "Post",
+        data:formData,
         success: function (res) {
             console.log(res);
 
@@ -268,8 +264,6 @@ $("body").on("submit", "#createNftform", async function (event) {
                 $(".mint-submit").html(' <button type="submit" class="btn btn-dark w-100 btn-profile mt-4">Create your NFT');
                 return false;
             }
-
-
             if (res.contractAddress != '' && res.img_path != '') {
 
                 mintToken(res.contractAddress, res.img_path, res.nft_id);
@@ -279,6 +273,9 @@ $("body").on("submit", "#createNftform", async function (event) {
                 toasterMessage('error', 'Something went wrong');
             }
 
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("AJAX error:", textStatus, errorThrown);
         }
     });
 

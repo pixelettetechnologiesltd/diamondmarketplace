@@ -13,12 +13,8 @@
                         <strong><?php echo display('Exception'); ?>!</strong> <?php echo esc($exception); ?>
                     </div>
                 <?php } ?>
-                <div class="row">
-
-                   
-                    
+                <div class="row"> 
                     <div class="col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
-
                         <div class="ms-lg-5">
                             <div class="item-header title-heading mb-3">
                                 <div class="item-collection__info d-flex align-items-center ">
@@ -50,16 +46,13 @@
                             </div>
 
 
-                           
+                         
                             <div class="timer-container position-relative mt-3"> 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p style="font-size:14px">From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded incommode. Why kept very ever home mrs. Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to. Vicinity relation sensible sociable surprise screened no up as.</p>
                                          
                                     </div>
-                                    
-
-
                                     <?php  
 
                                     $startAuction   = isset($nftInfo->start_date) ? $nftInfo->start_date : 0;
@@ -77,10 +70,7 @@
                                             if($isUser){  
                                     ?>      
                                             <span id="loggedinWallet" wallet="<?php echo $loggedinWallet; ?>"></span>
-                                            <a class="btn btn-l btn-pills btn-outline-primary me-2 bid-btn buynow-btn" min_price="<?php echo (!empty($nftInfo->min_price)) ? $nftInfo->min_price : 0;  ?>" data-bs-toggle="modal" data-bs-target="#buyNowPopup" buyurl="<?php echo base_url("user/asset/buy/{$nftInfo->token_id}/{$nftInfo->nftId}/{$nftInfo->contract_address}"); ?>"><i class="mdi mdi-gavel fs-5 me-2"></i><?php echo display('Buy_Now'); ?></a>
-
-                                             
-                                             
+                                            <a class="btn btn-l btn-pills btn-outline-primary me-2 bid-btn buynow-btn" min_price="<?php echo (!empty($nftInfo->min_price)) ? $nftInfo->min_price : 0;  ?>" data-bs-toggle="modal" data-bs-target="#buyNowPopup" buyurl="<?php echo base_url("user/asset/buy/{$nftInfo->token_id}/{$nftInfo->nftId}/{$nftInfo->contract_address}"); ?>"><i class="mdi mdi-gavel fs-5 me-2"></i><?php echo display('Buy_Now'); ?></a>       
                                     <?php  
                                             }else{  
                                     ?> 
@@ -111,8 +101,6 @@
                                         <a href='<?php echo base_url("user/asset/sale/{$nftInfo->token_id}/{$nftInfo->nftId}/{$nftInfo->contract_address}"); ?>' class="btn btn-l btn-pills btn-outline-primary me-2 bid-btn"><i class="mdi mdi-gavel fs-5 me-2"></i><?php echo display('List_for_Sell'); ?></a>
 
                                         <a href='<?php echo base_url("user/assets/transfer/{$nftInfo->nftId}/{$nftInfo->token_id}/{$nftInfo->contract_address}"); ?>' class="btn btn-l btn-pills btn-outline-primary me-2 bid-btn"><i class="mdi mdi-gavel fs-5 me-2"></i><?php echo display('Transfer'); ?></a>
-  
-
                                     <?php
                                     } 
                                     ?>
@@ -123,22 +111,58 @@
                             <div class="row ">
                                 <div class="col-12">
                                 <div class="progress">
-                             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CO VG</div>
+                             <div class="progress-bar" role="progressbar" style="width: <?php echo $color.'%'?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="5">
+                             <?php if($nftInfo->color==0){ echo "D"; }
+                              else if ($nftInfo->color==1) {echo "E";}
+                              else if ($nftInfo->color=2) {echo "F";}
+                              else if ($nftInfo->color==3) {echo "J";}
+                              else if ($nftInfo->color==4) {echo "H";}
+                              else if ($nftInfo->color==5) {echo "I";}
+                              ?>
+                            </div>
+                            </div>
+                           
+                            <div class="progress" style="margin-top:10px">
+                             <div class="progress-bar" role="progressbar" style="width: <?php echo $clarity.'%'?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="4">
+                             <?php if($nftInfo->clarity==0){ echo "IF"; }
+                              else if ($nftInfo->clarity==1) {echo "VVS1";}
+                              else if ($nftInfo->clarity=2) {echo "VVS2";}
+                              else if ($nftInfo->clarity==3) {echo "VS1";}
+                              else if ($nftInfo->clarity==4) {echo "VS2";}
+                              ?>
+                            </div>
+                            </div>
+                            <div class="progress" style="margin-top:10px">
+                             <div class="progress-bar" role="progressbar" style="width: <?php echo $carat.'%'?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="6">
+                             <?php if($nftInfo->carat==1){ echo "1"; }
+                              else if ($nftInfo->carat==2) {echo "1.5-2";}
+                              else if ($nftInfo->carat=3) {echo "2.5-3";}
+                              else if ($nftInfo->carat==4) {echo "3.5-4";}
+                              else if ($nftInfo->carat==5) {echo "4.5-5";}
+                              else if ($nftInfo->carat==6) {echo "5.5-6";}
+                              else if ($nftInfo->carat==3) {echo "6.5-7";}
+                              ?>
+                            </div>
                             </div>
                             
                             <div class="progress" style="margin-top:10px">
-                             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CO J</div>
+                             <div class="progress-bar" role="progressbar"style="width: <?php echo $cut.'%'?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="2">
+                             <?php if($nftInfo->cut==0){ echo "GOOD"; }
+                              else if ($nftInfo->cut==1) {echo "Very Good";}
+                              else if ($nftInfo->cut=2) {echo "Ideal";}
+                              ?>
+                            </div>
                             </div>
                             <div class="progress" style="margin-top:10px">
-                             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CI VSSI</div>
+                             <div class="progress-bar" role="progressbar" style="width: <?php echo $price_slider.'%'?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="6">
+                             <?php echo $nftInfo->price_slider.'$'; 
+                              ?>
                             </div>
-                            <div class="progress" style="margin-top:10px">
-                             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CA 0.3</div>
                             </div>
                             <div class="accordion-item" style="margin-top:50px">
                  
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                         <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                             <?php echo display('PROOF OF AUTHENTICITY'); ?>
                         </button>

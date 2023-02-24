@@ -319,6 +319,7 @@ class User_nfts extends BaseController
 
   public function create_new_nft_action()
   {
+   
     ini_set('memory_limit', '44M');
     $this->validation->setRule('item_name', 'Nft Name','required'); 
     $this->validation->setRule('collection', 'Colleection','required'); 
@@ -416,8 +417,12 @@ class User_nfts extends BaseController
         'contract_address' => '',  
         'trx_hash' => '',  
         'owner_wallet' => '',  
+        'color' => $this->request->getVar('color', FILTER_SANITIZE_STRING),
+        'clarity' => $this->request->getVar('clarity', FILTER_SANITIZE_STRING), 
+        'Carat' => $this->request->getVar('Carat', FILTER_SANITIZE_STRING),
+        'Cut' => $this->request->getVar('Cut', FILTER_SANITIZE_STRING),
+        'price_slider' => $this->request->getVar('price_slider', FILTER_SANITIZE_STRING),
       );
-
       $returnId = $this->common_model->save_return_id('nfts_store', $data);
 
       $returnIdInfo = $this->common_model->where_row('nfts_store', array('id' =>$returnId));

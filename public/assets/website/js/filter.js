@@ -1,24 +1,19 @@
 $(document).ready(function() {
     $('#apply-filter-btn').click(function() {
-        let colorSliderValues = colorSlider.value;
-        var claritySliderValues = claritySlider.value;
-        var cutSliderValues = cutSlider.value;
-        var priceSliderValues = priceSlider.value;
-        var caratSliderValues = caratSlider.value;
-    
-        
-        var data = {
-            color: colorSliderValues,
-            clarity: claritySliderValues,
-            carat: caratSliderValues,
-            cut: cutSliderValues,
-            price: priceSliderValues
-        }
-      
+        var color = $('input[name="color-slider"]').val();
+        var clarity = $('input[name="clarity-slider"]').val();
+        var carat = $('input[name="carat-slider"]').val();
+        var c = $('input[name="cut-slider"]').val();
+        var color = $('input[name="price-slider"]').val();
+      // Get the form data
+      var formData = $('#filter-form').serialize();
+      console.log(formData);
+      return;
+      // Send an AJAX request to the server
       $.ajax({
         type: 'POST',
-        url: base_url,
-        data: data,
+        url: 'your-server-url.php',
+        data: formData,
         success: function(response) {
           // Handle the server response
           console.log(response);

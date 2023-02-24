@@ -66,19 +66,24 @@ class Home extends BaseController
         }
 
         $data['nftInfo'] = $info = $this->web_model->getNftDetails($tokenid, $nftTableId);
+         $data['color']=$color=$info->color/5*100;
+         $data['clarity']=$clarity=$info->clarity/4*100;
+         $data['carat']=$carat=$info->Carat/7*100;
+         $data['cut']= $cut=$info->Cut/2*100;
+        
+       
+         $data['price_slider']= $price_slider=$info->price_slider/50000*100;
+        
         if(!isset($info)){ 
             return redirect()->to(base_url());
         }
-        
         $data['listings']               = $this->web_model->getListings($tokenid, $nftTableId);
         $data['moreNftsFromCollection'] = $this->web_model->getNfts(['nfts_store.status'=> 3, 'nfts_store.id !='=>$nftTableId,'nft_listing.status'=> 0, 'nfts_store.collection_id'=>$info->collection_id], 5);
          
         $data['favourite']          = $this->common_model->countRow('favorite_items', ['nft_id'=> $nftTableId, 'user_id'=>$this->userId]);
        $data['bid_info']            = $this->web_model->getNftWiseBid($info->nftId, $info->listing_id);
         $data['activities']         = $this->common_model->item_activity($nftTableId, $tokenid);
-        
- 
-        if ($this->session->getFlashdata('exception') != null) {  
+         if ($this->session->getFlashdata('exception') != null) {  
             $data['exception'] = $this->session->getFlashdata('exception');
         }else if($this->session->getFlashdata('message') != null){
             $data['message'] = $this->session->getFlashdata('message');
@@ -94,7 +99,6 @@ class Home extends BaseController
         $data['networks']           = $this->common_model->where_row('blockchain_network', array('id' => $info->blockchain_id));
       
         $data['content']            = view('themes/'.$this->templte_name->name.'/nft_details',$data);
-        
         return $this->template->website_layout($data);
     }
 

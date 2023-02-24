@@ -16,7 +16,6 @@ $routes->group('/', ['namespace' => 'App\Modules\Website\Controllers'], function
         $subroutes->add('signup', 'Home::register');
         $subroutes->add('user/signin', 'Home::login');
         $subroutes->add('home/forgotPassword', 'Home::forgotPassword');
-        
         $subroutes->add('about', 'Home::about');
        
         $subroutes->add('faq', 'Home::faq');
