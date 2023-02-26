@@ -8,12 +8,9 @@ class Home extends BaseController
     function __construct()
     {
         // write your __construct
-
     }
     public function index()
     {
-
-
         $data['collectionInfo'] = $collectionInfo = $this->common_model->where_row('nft_collection', []);
         if (empty($collectionInfo)) {
             return redirect()->to(base_url());
@@ -29,7 +26,7 @@ class Home extends BaseController
         $data['networks'] = $this->common_model->where_rows('blockchain_network', array('status' => 1), 'id', 'asc');
 
         $data['frontendAssets'] = base_url('public/assets/website');
-        $data['title']        = str_replace('-', ' ', $slug);
+        // $data['title']        = str_replace('-', ' ', $slug);
         $data['content']        = view('themes/' . $this->templte_name->name . '/collection_wise_nfts', $data);
         return $this->template->website_layout($data);
     }
@@ -107,10 +104,18 @@ class Home extends BaseController
 
     public function ajax_coll_nfts($collectionId = null, $loadmore = 1)
     {
+
         $limit = 20;
         $data['nfts'] = $this->web_model->getNfts(['nfts_store.collection_id' => $collectionId], ($loadmore * $limit));
         $result = view('themes/' . $this->templte_name->name . '/ajax_nfts', $data);
+        echo json_encode(['status' => true, 'data' => $result]);
+    }
 
+    public function ajax_coll_nfts_filter($collectionId = null, $color = null, $loadmore = 1)
+    {
+        $limit = 20;
+        $data['nfts'] = $this->web_model->getNfts(['nfts_store.collection_id' => $collectionId, 'nfts_store.color >= ' => $color[0], 'nfts_store.color <=' => $color[2]], ($loadmore * $limit));
+        $result = view('themes/' . $this->templte_name->name . '/ajax_nfts', $data);
         echo json_encode(['status' => true, 'data' => $result]);
     }
 
