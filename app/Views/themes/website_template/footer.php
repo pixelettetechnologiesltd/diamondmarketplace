@@ -96,6 +96,7 @@
     <script src="<?php echo esc($frontendAssets); ?>/js/custom.js"></script>  
     <script src="<?php echo esc($frontendAssets); ?>/js/wallet.js"></script>
     <script src="<?php echo esc($frontendAssets); ?>/js/slider.js"></script>
+    <script src="<?php echo esc($frontendAssets); ?>/js/filter.js"></script>
 </body>
 
 </html>
