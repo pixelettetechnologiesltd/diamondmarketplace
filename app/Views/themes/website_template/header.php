@@ -102,17 +102,17 @@
 
                     <li class="nav-item">
                         <?php if (!$session->userdata('isUser')) { ?>
-                            <a href="javascript:;" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Marketplace</a>
+                            <a href=<?php echo base_url('') ?> class="nav-link">Marketplace</a>
                         <?php } else { ?>
-                            <a class="nav-link" href="">Marketplace</a>
+                            <a class="nav-link" href=<?php echo base_url('') ?>>Marketplace</a>
                         <?php } ?>
                     </li>
 
                     <li class="nav-item">
                         <?php if (!$session->userdata('isUser')) { ?>
-                            <a href=<?php echo base_url('token')?> class="nav-link">Token</a>
+                            <a href=<?php echo base_url('token') ?> class="nav-link">Token</a>
                         <?php } else { ?>
-                            <a href=<?php echo base_url('token')?> class="nav-link">Token</a>
+                            <a href=<?php echo base_url('token') ?> class="nav-link">Token</a>
                         <?php } ?>
 
                     </li>

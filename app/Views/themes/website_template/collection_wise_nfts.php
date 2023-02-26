@@ -53,7 +53,12 @@
               let base_uri = $("#siteuri").attr("mybaseuri");
               let coll_id = $("#ajax_collection_wise_nfts").attr("collect-id");
               let color_id = document.getElementsByName("color-slider");
-              var grtCollNftsUrl = base_uri + "/ajax_coll_nfts_filter/" + coll_id + "/" + color_id[0].value + "/" + 1;
+              let clarity_id = document.getElementsByName("clarity-slider");
+              let carat_id = document.getElementsByName("carat-slider");
+              let cut_id = document.getElementsByName("cut-slider");
+              let price_id = document.getElementsByName("price-slider");
+
+              var grtCollNftsUrl = base_uri + "/ajax_coll_nfts_filter/" + coll_id + "/" + color_id[0].value + "/" + clarity_id[0].value + "/" + carat_id[0].value + "/" + cut_id[0].value + "/" + price_id[0].value + "/" + 1;
               if (coll_id) {
                 $.ajax({
                   url: grtCollNftsUrl,
