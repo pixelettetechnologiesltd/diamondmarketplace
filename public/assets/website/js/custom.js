@@ -180,7 +180,7 @@ $(document).ready(function () {
         dataType: "json",
         contentType: "application/json",
         success: function (res) {
-          //   $("#ajax_collection_wise_nfts").html(res.data);
+          $("#ajax_collection_wise_nfts").html(res.data);
         },
       });
     }
