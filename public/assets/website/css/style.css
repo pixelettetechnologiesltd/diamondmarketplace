@@ -1203,9 +1203,9 @@ small.rate.fw-semi-bold.text-primary {
   border-radius: 50%;
   background-color: #00c9a7;
 }
-.btn {
+/* .btn {
 background: transparent !important;
-}
+} */
 .btn-outline-primary {
 
   border-color: transparent !important;

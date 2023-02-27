@@ -66,7 +66,6 @@
                 <div class="position-relative d-none d-md-block">
 
                     <input class="form-control me-2 h-auto-search" type="search" placeholder="<?php echo display('Search_your_nfts'); ?>.." aria-label="Search">
-
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search searchIcon">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -98,7 +97,7 @@
                 </div>
                 <ul class="navbar-nav">
 
-
+           
                     <li class="nav-item">
                         <?php if (!$session->userdata('isUser')) { ?>
                             <a href=<?php echo base_url('') ?> class="nav-link">Marketplace</a>
@@ -141,7 +140,8 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="<?php echo base_url('user/dashboard'); ?>"><?php echo display('My_NFTs'); ?></a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('user/dashboard?my=favorite'); ?>"><?php echo display('Favorites'); ?></a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('user/my-collection'); ?>"><?php echo display('My_Collections'); ?></a></li>
+                            
+                               <?php  if($walletAddress->wallet_address==$userInfo->wallet_address) { ?> <li><a class="dropdown-item" href="<?php echo base_url('user/my-collection'); ?>"><?php echo display('My_Collections'); ?></a></li> <?php }  ?>
                                 <li><a class="dropdown-item" href="<?php echo base_url('user/settings'); ?>"><?php echo display('Profile'); ?></a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -205,7 +205,9 @@
                                     <span><?php echo display('Favourites'); ?></span>
                                 </a>
                             </li>
+                            <?php if($walletAddress->wallet_address==$userInfo->wallet_address) { ?>
                             <li>
+                          
                                 <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url('user/my-collection'); ?>">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2 feather feather-shopping-bag">
                                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
@@ -215,7 +217,7 @@
                                     <span><?php echo display('My_Collections'); ?></span>
                                 </a>
                             </li>
-
+                            <?php }   ?>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

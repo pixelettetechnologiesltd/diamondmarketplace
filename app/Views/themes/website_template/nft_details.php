@@ -208,7 +208,7 @@
             <!-- NFT image info -->
             <div class="col-md-6">
                 <div class="position-relative">
-                    <button type="button" class="btn btn-outline-primary d-fav-item position-absolute rounded-circle" nftId="<?php echo esc($nftInfo->nftId); ?>">
+                    <button type="button"  style="background:transparent" class="btn btn-outline-primary d-fav-item position-absolute rounded-circle" nftId="<?php echo esc($nftInfo->nftId); ?>">
                         <img src=<?php echo base_url() .'/'. '/public/uploads/nfts/dnxt.png'   ?> height="100%" width="100%">
                     </button>
                     <?php

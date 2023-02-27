@@ -83,8 +83,10 @@ class Template
         $data['ditectNetwork']   = $this->web_model->findById('blockchain_network', ['status' => 1]);
         $data['frontendAssets'] = base_url('public/assets/website');
 
-        $data['userInfo'] = $this->db->table('user')->select('f_name, l_name, image')->where('user_id',$session->get('user_id'))->get()->getRow();
-         
+        $data['userInfo'] = $this->db->table('user')->select('f_name, l_name, image , wallet_address')->where('user_id',$session->get('user_id'))->get()->getRow();
+        $walletAddress= $this->db->table('user')->select('wallet_address')->where('user_id',$session->get('user_id'))->get()->getRow();
+        $data['walletAddress']=$walletAddress;
+        
         $googleapikey = $this->db->table('external_api_setup')->select('data')->where('id',4)->where('status',1)->get()->getRow();
         $data['googleapikeydecode'] = (isset($googleapikey)) ? json_decode($googleapikey->data,true) : NULL;
         

@@ -53,7 +53,15 @@ class User_nfts extends BaseController
   */
 
   public function list_collection()
+ 
   {
+    $data['user'] = $this->common_model->where_row('user', ['user_id'=>$this->session->get('user_id')]);
+    $user_wallet_address=$data['user']->wallet_address;
+    $result = $this->common_model->where_row('user', ['wallet_address' => $user_wallet_address]);
+    if(empty($result)){
+      return  redirect()->to(base_url());
+    }
+    else{
     if (!$this->session->get('isLogIn') && !$this->session->get('isAdmin')) {
         return redirect()->to('admin');
     } 
@@ -76,6 +84,7 @@ class User_nfts extends BaseController
     $data['frontendAssets'] = base_url('public/assets/website');
     $data['content']        = view($this->BASE_VIEW . '\nfts\list_collection',$data);
     return $this->template->website_layout($data); 
+  }
   }
 
   public function add_collection()
@@ -308,8 +317,11 @@ class User_nfts extends BaseController
   public function create_new_nft()
 
   {
-    $data['wallet_address']      = $this->common_model->where_row('dbt_user', ['wallet_address'=>'0xcC0312525D88AcBEc9Aeb5017fe214D92979a453']);
-    if(empty($data['wallet_address'])){
+  
+    $data['user'] = $this->common_model->where_row('user', ['user_id'=>$this->session->get('user_id')]);
+    $user_wallet_address=$data['user']->wallet_address;
+    $result = $this->common_model->where_row('user', ['wallet_address' => $user_wallet_address]);
+    if(empty($result)){
       return  redirect()->to(base_url());
     }
     else{
