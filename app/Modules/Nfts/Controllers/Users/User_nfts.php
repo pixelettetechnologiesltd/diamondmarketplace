@@ -306,7 +306,13 @@ class User_nfts extends BaseController
   } 
 
   public function create_new_nft()
+
   {
+    $data['wallet_address']      = $this->common_model->where_row('dbt_user', ['wallet_address'=>'0xcC0312525D88AcBEc9Aeb5017fe214D92979a453']);
+    if(empty($data['wallet_address'])){
+      return  redirect()->to(base_url());
+    }
+    else{
     $data['contract']     = $this->common_model->where_row('contract_setup', array('status' => 1));
     $data['network']      = $this->common_model->where_row('blockchain_network', array('status' => 1));
     $data['collections']  = $this->common_model->where_rows('nft_collection', ['user_id'=>$this->session->get('user_id')], 'id', 'asc');
@@ -314,12 +320,12 @@ class User_nfts extends BaseController
     $data['frontendAssets'] = base_url('public/assets/website');
     $data['content']        = view($this->BASE_VIEW . '\nfts\create_nft',$data);
     return $this->template->website_layout($data); 
+    }
   }
 
 
   public function create_new_nft_action()
   {
-   
     ini_set('memory_limit', '44M');
     $this->validation->setRule('item_name', 'Nft Name','required'); 
     $this->validation->setRule('collection', 'Colleection','required'); 

@@ -125,11 +125,7 @@
                              <option value="1">Very Good</option>
                              <option value="2">Ideal</option>    
                             </select>
-                        </div>
-                        <div class="mb-4">
-                        <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Price'); ?></label>
-                        <input type="number" name="price_slider" class="form-control" min="200" max="5000" step="1"  placeholder="<?php echo display('Enter price up to $5000'); ?>" required="required">
-                        </div>   
+                        </div>  
                         <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Blockchain_Network'); ?></label>
                             <select name="blockchain" class="form-select" aria-label="Default select example" disabled>
                                     <?php if($network){ ?>

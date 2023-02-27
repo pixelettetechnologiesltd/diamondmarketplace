@@ -51,12 +51,8 @@
                     </div>
                     <span class="like-btn"> 
                         <button class="like-wrap text-muted d-flex align-items-center fw-semi-bold favorite_item" id="favorite_item" nftId="<?php echo esc($nft->nftId); ?>" favoriteVal="<?php echo esc($nft->favoriteVal); ?>">
-                            <svg class="like-icon_<?php echo esc($nft->nftId); ?> <?php if($nft->favoriteActive==1) {echo "like-active";} ?>" xmlns="http://www.w3.org/2000/svg" width="14"
-                                height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="feather feather-heart">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"> </path>
-                            </svg>
+                        <img src=<?php echo base_url() .'/'. '/public/uploads/nfts/dnxt.png'   ?> height="100%" width="100%">
+
                             <span class="like-number_<?php echo esc($nft->nftId); ?> ms-1"><?php echo esc($nft->favoriteVal) ?></span>
                         </button>
                     </span>

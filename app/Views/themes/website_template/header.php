@@ -57,12 +57,11 @@
             <!-- Navbar brand -->
             <div class="logo-width">
                 <a class="navbar-brand" href="<?php echo base_url(); ?>">
+            
                     <img src="<?php echo base_url() . $settings->logo_web ?>">
                 </a>
             </div>
-
-
-
+           
             <div class="search-wrap d-none d-md-block" style="display:none !important">
                 <div class="position-relative d-none d-md-block">
 
@@ -77,7 +76,7 @@
 
                 </div>
             </div>
-
+           
             <div class="collapse navbar-collapse navbar-custom-collapse ms-auto" id="navbarSupportedContent">
                 <!-- Navbar collapse header -->
                 <div class="navbar-collapse-header">
@@ -125,11 +124,6 @@
                         <?php } ?>
 
                     </li>
-
-
-
-
-
                     <?php if ($session->userdata('isAdmin')) { ?>
 
                         <li class="nav-item">
@@ -143,7 +137,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <?php echo display('Account'); ?>
                             </a>
-
+                           
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="<?php echo base_url('user/dashboard'); ?>"><?php echo display('My_NFTs'); ?></a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('user/dashboard?my=favorite'); ?>"><?php echo display('Favorites'); ?></a></li>
@@ -167,9 +161,10 @@
                         <button type="button" class="btn btn-registration" id="connect_wallet">Connect Wallet</button>
                     </li>
                 <?php } ?>
-
+               
+                
                 <?php if ($session->userdata('isLogIn') && !$session->userdata('isAdmin')) { ?>
-
+                
                     <li class="nav-item dropdown d-none d-sm-flex">
                         <a class="dropdown-toggle header-icon nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?php

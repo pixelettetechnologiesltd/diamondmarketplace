@@ -209,12 +209,7 @@
             <div class="col-md-6">
                 <div class="position-relative">
                     <button type="button" class="btn btn-outline-primary d-fav-item position-absolute rounded-circle" nftId="<?php echo esc($nftInfo->nftId); ?>">
-                        <svg class="like-icon_<?php echo esc($nftInfo->nftId); ?> <?php if ($favourite == 1) {
-                                                                                        echo "like-active";
-                                                                                    } ?>" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                            </path>
-                        </svg>
+                        <img src=<?php echo base_url() .'/'. '/public/uploads/nfts/dnxt.png'   ?> height="100%" width="100%">
                     </button>
                     <?php
                     $fileExtension = pathinfo($nftInfo->file, PATHINFO_EXTENSION);

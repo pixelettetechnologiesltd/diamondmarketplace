@@ -16,7 +16,7 @@ class Profile extends BaseController {
             'user_id' => $user_id
         );
         $userInfo = $this->common_model->read('user',$where);
-
+    
         $this->validation->setRule('full_name', display('full_name'), 'required|alpha_space');
         
          

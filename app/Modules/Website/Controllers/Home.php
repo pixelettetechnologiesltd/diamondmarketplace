@@ -11,11 +11,14 @@ class Home extends BaseController
     }
     public function index()
     {
+      
         $data['collectionInfo'] = $collectionInfo = $this->common_model->where_row('nft_collection', []);
         if (empty($collectionInfo)) {
             return redirect()->to(base_url());
         }
+
         $data['ownerInfo'] = $this->common_model->where_row('user', ['user_id' => $collectionInfo->user_id]);
+        
         $data['totalItem'] = $this->web_model->countRow('nfts_store', ['collection_id' => $collectionInfo->id, 'status' => 3]);
         $data['nftOwner'] = $this->web_model->countNftOwnerInCollection('nfts_store', ['collection_id' => $collectionInfo->id]);
         $data['floorPrice'] = $this->web_model->getMinPrice('nfts_store', ['collection_id' => $collectionInfo->id, 'status' => 3], 'price');
@@ -420,6 +423,8 @@ class Home extends BaseController
 
     public function login()
     {
+       
+        
         if ($this->session->userdata('isLogIn'))
             return redirect()->to(base_url('/'));
 
@@ -431,11 +436,12 @@ class Home extends BaseController
 
         $data['content']    = view('themes/' . $this->templte_name->name . '/login', $data);
         return $this->template->website_layout($data);
+
     }
 
     public function login_action()
     {
-
+      
         $walletAddress = $this->request->getVar('walletAddress', FILTER_SANITIZE_STRING);
         $chainId       = $this->request->getVar('chainId', FILTER_SANITIZE_STRING);
 
@@ -483,12 +489,12 @@ class Home extends BaseController
     }
 
     public function network_update()
-    {
-        $userInfo = $this->web_model->findById('user', array('user_id' => $this->userId));
+    { 
 
+        $userInfo = $this->web_model->findById('user', array('user_id' => $this->userId));
         $chainId = $this->request->getVar('chainId', FILTER_SANITIZE_STRING);
         $data    = ['chain_id' => $chainId];
-
+        
         $this->web_model->update('user', $data, array('user_id' => $this->userId));
 
         $sData = array(
@@ -1235,6 +1241,7 @@ class Home extends BaseController
     {
         $data['isLogIn'] = $this->session->userdata('isLogIn');
         $data['content'] = view('themes/' . $this->templte_name->name . '/token', $data);
+    
         return $this->template->website_layout($data);
     }
 }

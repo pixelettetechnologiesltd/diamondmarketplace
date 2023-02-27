@@ -1203,10 +1203,17 @@ small.rate.fw-semi-bold.text-primary {
   border-radius: 50%;
   background-color: #00c9a7;
 }
+.btn {
+background: transparent !important;
+}
+.btn-outline-primary {
 
+  border-color: transparent !important;
+}
 a.d-block.fw-semi-bold.h6.text-dark.text-truncate.title {
   color: #A08B5E !important;
   text-align: left;
+  margin-top: -41px;
 }
 
 .card-body.content.position-relative.mt-3 {
