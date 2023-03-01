@@ -5,10 +5,10 @@
                 <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-9">
-              <h2 class="get_in_touch">GET IN <br>Touch</h2>
+              <h2 class="get_in_touch">GET IN <br>TOUCH</h2>
               <span class="line"></span>
               <br></br>
-              <span class="text">Text to us and tell us what you are looking for.</span>
+              <!-- <span class="text">Text to us and tell us what you are looking for.</span> -->
             </div>
                 </div>
                 <br></br>
@@ -39,7 +39,7 @@
 
                                     <li><a href="<?php echo base_url('contact') ?>" class="link d-block font-weight-500"><?php echo display('+351 218481149'); ?></a></li>
                                 </ul>
-                                <h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white"><?php echo display('WHATSAPP:'); ?></h3>
+                                <h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white"><?php echo display('Whatsapp'); ?></h3>
                                 <ul class="footer-link list-unstyled menu">
 
                               <li><a href="<?php echo base_url('contact') ?>" class="link d-block font-weight-500"><?php echo display('+351 925287726'); ?></a></li>
@@ -49,8 +49,17 @@
                                  
                                 <h3 class="link-title fs-18 mb-3 font-weight-600 position-relative text-white"><?php echo display('Email'); ?>
                                 </h3>
-                                <div class="copyright" style="color: #A9A9A9; font-size: 14px; transform: rotate(270deg); position: relative; left: 130px; bottom: 53px;">ES PT EN ©DiamondNXT - 2023</div>
-
+                                <div class="copyright" style="color: #A9A9A9; font-size: 14px; transform: rotate(270deg); position: relative; left: 300px;">
+                               <span class="gap"><a href="https://twitter.com/DiamondNXT"><img src=<?php echo base_url() .'/'. '/public/uploads/nfts/twitter.png'   ?> width="4%"/></a>
+                             </span>
+                             <span class="gap"><a href="https://www.linkedin.com/company/diamondnxt/"><img src=<?php echo base_url() .'/'. '/public/uploads/nfts/linkedin.png'   ?> width="5%"/></a>
+                             </span>
+                             <span class="gap"><a href="https://www.instagram.com/diamondnxt/"><img src=<?php echo base_url() .'/'. '/public/uploads/nfts/insta.png'   ?> width="5%"/></a>
+                             </span>
+                              <!-- <span class="gap">PT</span>
+                              <span class="gap"> EN</span> -->
+                              <span> @ 2023 -  Diamond NXT </span>
+                            </div>
                                 <!-- Social link -->
                                 <ul class="footer-link list-unstyled menu">
 

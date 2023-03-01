@@ -1,7 +1,10 @@
     
     <?php 
-    if(count($nfts) > 0){
-    foreach ($nfts as $key => $nft) { 
+    
+    if(count($nfts) > 0){?>
+    <h4 class="total_nfts">Total Nfts  <?php echo count($nfts)  ?></h4>  
+   <?php foreach ($nfts as $key => $nft) {
+        
     ?>
     
     <div class="col-sm-6 col-md-4 col-lg-4 myfvt"> 
@@ -23,17 +26,12 @@
                 ?> 
                 <a href="<?php echo base_url('nft/asset/details/'.$nft->token_id.'/'.$nft->nftId.'/'.$nft->contract_address); ?>" class="item-img position-relative overflow-hidden d-block"><img src="<?php echo base_url().$nft->file; ?>" class="img-fluid" alt=""></a>
             <?php } ?>
-
-                
-
-
                 <!-- <div class="nft-time-counter position-absolute rounded-pill title-dark">
                     
                     <i class="uil uil-clock"></i> <small id="auction-item-51"><?php echo esc($nft->auctionDateTime); ?></small>
                     
                 </div> -->
             </div>
-            
             <div class="card-body content position-relative mt-3">
                 <div class="d-flex justify-content-between mb-2">
                     <div class="img-group">
@@ -41,10 +39,8 @@
                         <a href="" class="user-avatar <?php if ($key > 0) echo 'ms-n3';  ?>">
                             <?php  
                             if($image->image){ ?>
-                                <img src="<?php echo base_url('public/uploads/dashboard/new')."/".$image->image ?>" alt="user"
-                                class="avatar avatar-sm-sm img-thumbnail border-0 shadow-sm rounded-circle">
+                               
                             <?php }else{  ?>
-                                <img src="<?php echo base_url('public/uploads/dashboard/user.png') ?>" class="avatar avatar-md-sm shadow-md rounded-pill" alt="">
                             <?php } ?>
                         </a>
                         <?php } ?> 
@@ -74,7 +70,7 @@
                   <span style="color:#505050">Owner</span>
                 </div>
                 <div class="d-flex justify-content-between">
-                  <span class="price">1000 LCX ($91)</span>
+                  <span class="price">1000 DNXT ($91)</span>
                   <span style="color:#505050"><?php echo esc($collection->title); ?></span>
                 </div>
               </li>

@@ -98,11 +98,12 @@
                         <div class="mb-4">
                             <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Clarity'); ?></label>
                             <select name="clarity" class="form-select" aria-label="Default select example">
-                             <option value="0">IF</option> 
-                             <option value="1">VVS1</option>
-                             <option value="2">VVS2</option>  
-                             <option value="3">VS1</option> 
-                             <option value="4">Vs2</option> 
+                            <option value="0">FL</option>  
+                            <option value="1">IF</option> 
+                             <option value="2">VVS1</option>
+                             <option value="3">VVS2</option>  
+                             <option value="4">VS1</option> 
+                             <option value="5">Vs2</option> 
                                  
                             </select>
                         </div>
@@ -121,11 +122,21 @@
                         <div class="mb-4">
                             <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Cut'); ?></label>
                             <select name="Cut" class="form-select" aria-label="Default select example">
-                             <option value="0">Good</option> 
+                            <option value="0">Good</option>  
                              <option value="1">Very Good</option>
-                             <option value="2">Ideal</option>    
+                             <option value="2">Excellent</option>
+                             <option value="3">Ideal</option>    
                             </select>
-                        </div>  
+                        </div> 
+                        <div class="mb-4">
+                            <label for="nft-title" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Report'); ?></label>
+                            <input type="file" name="report" class="form-control" id="report" placeholder="<?php echo display('Report'); ?>" required="required">
+                        </div>
+                        <div class="mb-4">
+                            <label for="nft-title" class="form-label fw-semi-bold text-black mb-1"><?php echo display(' Diamond NXT Report'); ?></label>
+                            <input type="file" name="dnxt_report" class="form-control" id="dnxt_report" placeholder="<?php echo display('Report'); ?>" required="required">
+                        </div>
+                         
                         <label for="exampleFormControlInput1" class="form-label fw-semi-bold text-black mb-1"><?php echo display('Blockchain_Network'); ?></label>
                             <select name="blockchain" class="form-select" aria-label="Default select example" disabled>
                                     <?php if($network){ ?>

@@ -51,8 +51,8 @@ function createSlider(
   });
 }
 let colors = ["D", "E", "F", "G", "H", "I"];
-let clarities = ["IF", "VVS1", "VVS2", "VS1", "VS2"];
-let cut = ["Good", "Very Good", "Ideal"];
+let clarities = ["FL","IF", "VVS1", "VVS2", "VS1", "VS2"];
+let cut = ["Good", "Very Good", "Excellent","Ideal"];
 let colorSlider = createSlider(
   0,
   colors.length - 1,
@@ -66,7 +66,7 @@ let colorSlider = createSlider(
 let claritySlider = createSlider(
   0,
   clarities.length - 1,
-  "IF",
+  "FL",
   "VS2",
   1,
   tooltipChangeHandler,
@@ -116,15 +116,16 @@ function renderingTicksHandlercarat(args) {
   args.text = args.value;
 }
 function createSliderCarat(start, end, step) {
-  const values = Array.from(Array((end - start) * 2 + 1).keys()).map(
+  const values = Array.from(Array((end - start) * 2 + 2).keys()).map(
     (x) => start + x * step
   );
+  values[values.length-1] = end;
 
   return new ej.inputs.Slider({
     min: start,
     max: end,
     step: step,
-    value: 3.5,
+    value: [start,end],
     tooltip: {
       placement: "Before",
       isVisible: true,
@@ -133,15 +134,14 @@ function createSliderCarat(start, end, step) {
     renderingTicks: renderingTicksHandlercarat,
     ticks: {
       placement: "After",
-      largeStep: 1,
-      smallStep: 1,
+      largeStep: 0.5,
+      smallStep: 0.5,
       showSmallTicks: true,
       value: values,
     },
     type: "Range",
   });
 }
-let caratSlider = createSliderCarat(1, 7, 0.5);
+let caratSlider = createSliderCarat(0.5, 7, 0.1);
 caratSlider.appendTo("#carat-slider");
-const queryString = window.location.search;
-console.log(queryString);
+

@@ -1153,7 +1153,9 @@ small.rate.fw-semi-bold.text-primary {
   padding: 1rem 1rem;
   border-radius: 0.75rem;
 }
-
+.gap{
+  margin:10px
+}
 .profile-cover-img-wrapper {
   position: absolute;
   top: 0;

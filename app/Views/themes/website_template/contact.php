@@ -23,7 +23,7 @@
               <div class="mb-4">
                 <h3 class="info-title link-title fs-18 mb-3 font-weight-600 position-relative">DROP A MESSAGE</h3>
                 <address class="mb-4">
-                Don’t worry, We never spam!
+               
                 </address>
               </div>
               <!-- /.End of address -->

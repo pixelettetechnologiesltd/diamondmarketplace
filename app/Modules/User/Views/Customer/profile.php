@@ -25,7 +25,7 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="withdraw-tab" data-bs-toggle="tab" data-bs-target="#withdraw"
                             type="button" role="tab" aria-controls="withdraw"
-                            aria-selected="false"><?php echo display('KYb'); ?></button>
+                            aria-selected="false"><?php echo display('KYB'); ?></button>
                     </li>
 
                 </ul>

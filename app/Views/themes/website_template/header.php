@@ -57,11 +57,9 @@
             <!-- Navbar brand -->
             <div class="logo-width">
                 <a class="navbar-brand" href="<?php echo base_url(); ?>">
-            
-                    <img src="<?php echo base_url() . $settings->logo_web ?>">
+                <img src="<?php echo base_url() . $settings->logo_web ?>">
                 </a>
             </div>
-           
             <div class="search-wrap d-none d-md-block" style="display:none !important">
                 <div class="position-relative d-none d-md-block">
 

@@ -124,15 +124,19 @@
 
                             <div class="progress" style="margin-top:10px">
                                 <div class="progress-bar" role="progressbar" style="width: <?php echo $clarity . '%' ?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="4">
-                                    <?php if ($nftInfo->clarity == 0) {
+                                    <?php 
+                                    if($nftInfo->clarity==0){
+                                    echo "FL";
+                                    }
+                                   else if ($nftInfo->clarity == 1) {
                                         echo "IF";
-                                    } else if ($nftInfo->clarity == 1) {
-                                        echo "VVS1";
                                     } else if ($nftInfo->clarity == 2) {
-                                        echo "VVS2";
+                                        echo "VVS1";
                                     } else if ($nftInfo->clarity == 3) {
-                                        echo "VS1";
+                                        echo "VVS2";
                                     } else if ($nftInfo->clarity == 4) {
+                                        echo "VS1";
+                                    } else if ($nftInfo->clarity == 5) {
                                         echo "VS2";
                                     }
                                     ?>
@@ -162,7 +166,7 @@
                             <div class="progress" style="margin-top:10px">
                                 <div class="progress-bar" role="progressbar" style="width: <?php echo $cut . '%' ?>" aria-valuenow="25" aria-valuemin="0" aria-valuemax="2">
                                     <?php if ($nftInfo->cut == 0) {
-                                        echo "GOOD";
+                                        echo "Excellent";
                                     } else if ($nftInfo->cut == 1) {
                                         echo "Very Good";
                                     } else if ($nftInfo->cut == 2) {
@@ -209,8 +213,18 @@
             <div class="col-md-6">
                 <div class="position-relative">
                     <button type="button"  style="background:transparent" class="btn btn-outline-primary d-fav-item position-absolute rounded-circle" nftId="<?php echo esc($nftInfo->nftId); ?>">
-                        <img src=<?php echo base_url() .'/'. '/public/uploads/nfts/dnxt.png'   ?> height="100%" width="100%">
+                        <img src=<?php echo base_url() .'/'. '/public/uploads/nfts/dnxt.png'   ?> height="80%" width="80%">
                     </button>
+                    <div class="wallet-address" style="top:90px; left:-13px"> 
+                      
+                     <input type="hidden" value="<?php echo base_url('nft/asset/details/' . $nftInfo->token_id . '/' . $nftInfo->nftId . '/' . $nftInfo->contract_address); ?>" class="form-control" id="mywallet" readonly="readonly">
+                        <div class="tooltips">
+                        <button id="copy-wallet" type="button">
+                        <span class="tooltiptext" id="myTooltip"><?php echo display('Copy_to_clipboard'); ?></span>
+                        <img src=<?php echo base_url() .'/'. '/public/uploads/nfts/share.png'   ?> height="100%" width="100%">
+                        </button>
+                         </div>
+                         </div> 
                     <?php
                     $fileExtension = pathinfo($nftInfo->file, PATHINFO_EXTENSION);
                     if ($fileExtension == 'mp4' || $fileExtension == 'webm') { ?>
@@ -231,7 +245,6 @@
                             <img src="<?php echo base_url() . '/' . $nftInfo->file; ?>" class="img-fluid rounded-3" alt="">
                         </a>
                     <?php } ?>
-
                 </div>
             </div>
         </div>
@@ -315,6 +328,7 @@
 
         <div class="row g-3 item-wrap">
             <?php foreach ($moreNftsFromCollection as $key => $moreNfts) {  ?>
+               <?php echo $moreNfts->token_id;  ?>
                 <div class="col-md-3">
                     <div class="card nft-items nft-primary rounded-7 border-0 overflow-hidden mb-1 p-4">
 
@@ -365,7 +379,7 @@
                                     <button class="like-wrap text-muted d-flex align-items-center fw-semi-bold favorite_item" nftId="<?php echo esc($moreNfts->nftId); ?>" favoriteVal="<?php echo esc($moreNfts->favoriteVal); ?>">
 
                                         <svg class="like-icon_<?php echo esc($moreNfts->nftId); ?> <?php if ($moreNfts->favoriteActive == 1) {
-                                                                                                        echo "like-active";
+                                     echo "like-active";
                                                                                                     } ?>" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                                             </path>

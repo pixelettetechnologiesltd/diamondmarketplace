@@ -52,8 +52,7 @@ class User_nfts extends BaseController
   |----------------------------------------------     
   */
 
-  public function list_collection()
- 
+  public function list_collection() 
   {
     $data['user'] = $this->common_model->where_row('user', ['user_id'=>$this->session->get('user_id')]);
     $user_wallet_address=$data['user']->wallet_address;
@@ -341,12 +340,17 @@ class User_nfts extends BaseController
     ini_set('memory_limit', '44M');
     $this->validation->setRule('item_name', 'Nft Name','required'); 
     $this->validation->setRule('collection', 'Colleection','required'); 
-  
-      
-    if ($this->validation->withRequest($this->request)->run()){
-
-      $file = $this->request->getFile('nft_file',FILTER_SANITIZE_STRING);
-       
+      $report = $this->request->getFile('report',FILTER_SANITIZE_STRING);
+      $dnxt_report = $this->request->getFile('dnxt_report',FILTER_SANITIZE_STRING);
+      if ($this->validation->withRequest($this->request)->run()) {
+        $report        = $this->request->getFile('report',FILTER_SANITIZE_STRING);
+        $dnxt_report        = $this->request->getFile('dnxt_report',FILTER_SANITIZE_STRING);
+        $savepath="public/uploads/dashboard/new/";
+        $savepath1="public/uploads/dashboard/new/";
+        if($this->request->getMethod() == "post"){
+            $report       =   $this->imagelibrary->image($report,$savepath,300,300);
+            $dnxt_report       =   $this->imagelibrary->image($dnxt_report,$savepath1,300,300);
+        }
       if($file->getSize() == 0){
 
         
@@ -439,7 +443,8 @@ class User_nfts extends BaseController
         'clarity' => $this->request->getVar('clarity', FILTER_SANITIZE_STRING), 
         'Carat' => $this->request->getVar('Carat', FILTER_SANITIZE_STRING),
         'Cut' => $this->request->getVar('Cut', FILTER_SANITIZE_STRING),
-        'price_slider' => $this->request->getVar('price_slider', FILTER_SANITIZE_STRING),
+        'report' => $this->request->getVar('report', FILTER_SANITIZE_STRING),
+        'dnxt_report' => $this->request->getVar('dnxt_report', FILTER_SANITIZE_STRING), 
       );
       $returnId = $this->common_model->save_return_id('nfts_store', $data);
 

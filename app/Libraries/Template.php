@@ -12,7 +12,6 @@ class Template
         $session    = \Config\Services::session();
   
     }
-
     public function admin_layout($data)
     {
          
